@@ -44,13 +44,17 @@
     <div class="d-flex flex-row h-100">
       <div style="flex: 1"></div>
       <div class="d-flex flex-column">
-        <div class="d-flex flex-row justify-content-center" style="flex: 3">
-          <div class="d-flex flex-column justify-content-end">
+        <div style="flex: 1"></div>
+        <div class="d-flex flex-column justify-content-end">
+          <div class="d-flex flex-row justify-content-center">
             <img src="picture/signature.png">
-            <p>a Biomedical Engineer, a Self-taught Developer, and <b>a Novice Baker</b></p><br>
-            <div class="d-flex flex-row justify-content-around">
+          </div>
+          <p>a Biomedical Engineer, a Self-taught Developer, and <b>a Novice Baker</b></p><br>
+          <div class="d-flex flex-row">
+            <div style="flex: 1"></div>
+            <div class="d-flex flex-row justify-content-around" style="flex: 4">
               <div style="height: 30px; width: 30px;">
-                <a href="" onclick="copyEmailToClipboard()">
+                <a href="#" onclick="copyEmailToClipboard()">
                   <img src="picture/email.svg" title="Click to copy my email">
                 </a>
               </div>
@@ -65,18 +69,26 @@
                 </a>
               </div>
               <div style="height: 30px; width: 30px;">
-                <a href="">
+                <a href="#">
                   <img src="picture/cv.svg" title="Click to download my CV">
                 </a>
               </div>
             </div>
+            <div style="flex: 1"></div>
+          </div>
+          <div class="d-flex flex-row">
+            <div class="d-flex flex-column align-items-center" style="flex: 1; min-height: 77px;">
+              <div id="emailcopy_alert1" style="display: none; height: 32px; width: 30px;">
+                <img src="picture/caret-up.svg">
+              </div>
+              <div id="emailcopy_alert2" style="display: none; background-color: #555555; border-radius:10px; color: #f7f7f7f1;">
+                <p style="margin: 10px">My email is copied</p>
+              </div>
+            </div>
+            <div style="flex: 1"></div>
           </div>
         </div>
-        <div class="d-flex flex-row" style="flex: 2">
-          <div style="height:60px; width: 30px;">
-            <img id="emailcopy_alert1" src="picture/caret-up.svg">
-          </div>
-        </div>
+        <div style="flex: 1"></div>
       </div>
       <div style="flex: 1"></div>
     </div>
