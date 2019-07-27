@@ -1,103 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <title>Struggling Duckling</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+<head>
+  <title>Struggling Duckling</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
-    <style>
-        body{
-          font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-          background-color: #f7f7f7f1;
-          color: #707070;
-          line-height: 1.5;
-          font-size: 17px;
-        }
-        body, html {
-          padding: 0;
-          margin: 0;
-        }
-        html{
-          height: 100%;
-          align-items:center;
-        }
-        body{
-          min-height: 100%;
-          align-items:center;
-        }
-    </style>
+  <style>
+    body {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f7f7f7f1;
+      color: #707070;
+      line-height: 1.5;
+      font-size: 17px;
+    }
 
-  </head>
+    body,
+    html {
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      height: 100%;
+      align-items: center;
+    }
+
+    body {
+      min-height: 100%;
+      align-items: center;
+    }
+  </style>
+
+</head>
 
 
-  <body>
-    <div class="container-fluid" style="min-width: 640px;height: 100vh">
-      <!--Blank space margin style="padding-top:10em"-->
-      <!-- <div class="row justify-content-center align-items-center" style="height: 10em"></div> -->
-
-      <div class="row h-100 justify-content-center align-items-end" style="max-height: 60%">
-          <div class="col-sm-12 center-block" style="text-align:center;height:auto">
-              <div><img src="picture/signature.png"></div>
-              <p>a Biomedical Engineer, a Self-taught Developer, and <b>a Novice Baker</b></p><br>
-
-              <div class="d-flex justify-content-center">
-                <button onclick="copyEmailToClipboard()" style="outline:none;border: none;background-color: Transparent"><img src="picture/email.svg" style="height:30px; width:auto; margin-left:2em;margin-right:2em" title="Click to copy my email"></button>
-                <a href="https://gitlab.com/tanawatChans/" target="_blank"><img src="picture/gitlab.svg" style="height:30px; width:auto; margin-left:2em;margin-right:2em" title="GitLab"></a>
-                <a href="https://github.com/tanawatChans/" target="_blank"><img src="picture/github.svg" style="height:30px; width:auto; margin-left:2em;margin-right:2em" title="GitHub"></a>
-                <a href=""><img src="picture/cv.svg" style="height:30px; width:auto; margin-left:2em;margin-right:2em" title="Click to download my CV"></a>
+<body>
+  <div class="container-fluid" style="width: 100vw; height: 100vh">
+    <div class="d-flex flex-row h-100">
+      <div style="flex: 1"></div>
+      <div class="d-flex flex-column">
+        <div class="d-flex flex-row justify-content-center" style="flex: 3">
+          <div class="d-flex flex-column justify-content-end">
+            <img src="picture/signature.png">
+            <p>a Biomedical Engineer, a Self-taught Developer, and <b>a Novice Baker</b></p><br>
+            <div class="d-flex flex-row justify-content-around">
+              <div style="height: 30px; width: 30px;">
+                <a href="" onclick="copyEmailToClipboard()">
+                  <img src="picture/email.svg" title="Click to copy my email">
+                </a>
               </div>
-
-                                 
+              <div style="height: 30px; width: 30px;">
+                <a href="https://gitlab.com/tanawatChans/">
+                  <img src="picture/gitlab.svg" title="GitLab">
+                </a>
+              </div>
+              <div style="height: 30px; width: 30px;">
+                <a href="https://github.com/tanawatChans/">
+                  <img src="picture/github.svg" title="GitHub">
+                </a>
+              </div>
+              <div style="height: 30px; width: 30px;">
+                <a href="">
+                  <img src="picture/cv.svg" title="Click to download my CV">
+                </a>
+              </div>
+            </div>
           </div>
-
         </div>
-        <div class="row h-100 justify-content-center align-items-start" style="max-height: 40%">
-            <div class="d-flex">
-                <div style="width:10em;justify-content:center">
-                  <img id="emailcopy_alert1" src="picture/caret-up.svg" style="height:2em; width:10em;display: none">
-                  <div id="emailcopy_alert2" style="display: none;width:10em;background-color: #555555; border-radius:10px; color: #f7f7f7f1;margin-top:-0.66em;text-align: center;justify-content: center; padding-top:0.5em;padding-bottom:0.5em">My email is copied</div>
-                </div>
-                <img src="picture/gitlab.svg" style="height:30px; width:auto; margin-left:2em;margin-right:2em;opacity: 0">
-                <img src="picture/github.svg" style="height:30px; width:auto; margin-left:2em;margin-right:2em;opacity: 0">
-                <img src="picture/cv.svg" style="height:30px; width:auto; margin-left:2em;margin-right:2em;opacity: 0">
-              </div> 
+        <div class="d-flex flex-row" style="flex: 2">
+          <div style="height:60px; width: 30px;">
+            <img id="emailcopy_alert1" src="picture/caret-up.svg">
+          </div>
         </div>
-        
       </div>
+      <div style="flex: 1"></div>
     </div>
-    
-    <!-- OnClick to copy email -->
-    <script>
-        function copyEmailToClipboard() {
-          var copyhelper = document.createElement("input");
-          copyhelper.className = 'copyhelper'
-          document.body.appendChild(copyhelper);
-          var result = "tanawat.chans@gmail.com";
-          copyhelper.value = result;
-          copyhelper.select();
-          document.execCommand("copy");
-          document.body.removeChild(copyhelper);
+    <!-- 
 
-          $("#emailcopy_alert1").fadeIn(800);
-          $("#emailcopy_alert1").fadeIn(1500);
-          $("#emailcopy_alert1").fadeOut(1600);
+      <div class="row h-40 justify-content-center align-items-start">
+        <div class="d-flex">
+          <div style="width:10em;justify-content:center">
+            <img id="emailcopy_alert1" src="picture/caret-up.svg" style="height:2em; width:10em;display: none">
+            <div id="emailcopy_alert2"
+              style="display: none;width:10em;background-color: #555555; border-radius:10px; color: #f7f7f7f1;margin-top:-0.66em;text-align: center;justify-content: center; padding-top:0.5em;padding-bottom:0.5em">
+              My email is copied</div>
+          </div>
+          <img src="picture/gitlab.svg" style="height:30px; width:auto; margin-left:2em;margin-right:2em;opacity: 0">
+          <img src="picture/github.svg" style="height:30px; width:auto; margin-left:2em;margin-right:2em;opacity: 0">
+          <img src="picture/cv.svg" style="height:30px; width:auto; margin-left:2em;margin-right:2em;opacity: 0">
+        </div>
+      </div> -->
+  </div>
+  </div>
 
-          $("#emailcopy_alert2").fadeIn(800);
-          $("#emailcopy_alert2").fadeIn(1500);
-          $("#emailcopy_alert2").fadeOut(1600);
+  <!-- OnClick to copy email -->
+  <script>
+    function copyEmailToClipboard() {
+      var copyhelper = document.createElement("input");
+      copyhelper.className = 'copyhelper'
+      document.body.appendChild(copyhelper);
+      var result = "tanawat.chans@gmail.com";
+      copyhelper.value = result;
+      copyhelper.select();
+      document.execCommand("copy");
+      document.body.removeChild(copyhelper);
 
-          $("#emailcopy_alert3").fadeIn(800);
-          $("#emailcopy_alert3").fadeIn(1500);
-          $("#emailcopy_alert3").fadeOut(1600);
-        }
-    </script>
+      $("#emailcopy_alert1").fadeIn(800);
+      $("#emailcopy_alert1").fadeIn(1500);
+      $("#emailcopy_alert1").fadeOut(1600);
 
-  </body>
+      $("#emailcopy_alert2").fadeIn(800);
+      $("#emailcopy_alert2").fadeIn(1500);
+      $("#emailcopy_alert2").fadeOut(1600);
+
+      $("#emailcopy_alert3").fadeIn(800);
+      $("#emailcopy_alert3").fadeIn(1500);
+      $("#emailcopy_alert3").fadeOut(1600);
+    }
+  </script>
+
+</body>
 
 
 
